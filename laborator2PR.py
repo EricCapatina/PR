@@ -7,11 +7,13 @@ from email.mime.base import MIMEBase
 import email
 import os
 import email.encoders
+import stdiomask
 
 port = 587
 host = input("Write ur Email:\n\t\t\t")
 smtp_server = "smtp.gmail.com"
-password = input('Write ur password:\n\t\t\t')
+print("Write ur password:\n\t\t\t")
+password = stdiomask.getpass()
 receivers = []
 imap_server = "imap.gmail.com"
 home_folder = os.path.dirname(os.path.abspath(__file__))
